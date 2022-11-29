@@ -1,0 +1,715 @@
+:root {
+  --main: #b70e1c;
+  --white: #fff;
+}
+
+.section-slider .slide__attributes {
+    display: grid;
+    grid-template-columns: 260px 260px;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 65px;
+    max-width: 620px;
+}
+
+.section-slider .slide__attributes--item {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    margin-right: 40px;
+}
+
+.section-slider .slide__attributes--item p {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--white);
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+}
+
+.section-slider .slide__attributes--item span {
+    font-weight: 700;
+    display: flex;
+}
+
+.section-slider .slide__attributes img {
+    width: auto;
+}
+
+.section-slider .slide__heading span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.section-slider .slide__heading h2 {
+    font-weight: 300;
+    font-size: 42px;
+    color: #fff;
+}
+
+.section-slider .slide__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-slider .slide__content {
+    max-width: 645px;
+}
+
+.section-slider .slide__description p {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.section-slider .slide__description .btn {
+    margin-top: 60px;
+}
+
+.section-slider .slide__flats {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    background-color: var(--main);
+    border-radius:3px;
+    padding:20px;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.section-slider .slide__flats:hover {
+    transform: scale(1.01) translateY(-10px);
+}
+
+.section-slider .slide__flats a {
+    font-size: 22px;
+    font-weight: 300!important;
+    color: #fff;
+
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 1.4;
+}
+
+.section-slider .slide__flats i {
+    width: 38px;
+    height: 37px;
+    background: url(../../images/icons/search-icon.png) no-repeat;
+    display: block;
+    margin-right: 10px;
+    display: block;
+}
+
+.logged-in .section-slider .slide {
+    top: 32px;
+    min-height: calc(100vh - 32px);
+}
+
+
+.section-about__finder {
+    color: #000000;
+    width: 100%;
+    height: 646px;
+    background: url(../../images/home-finder-bg.jpg) no-repeat center bottom;
+    margin-top: -155px;
+    margin-left: 40px;
+    position: relative;
+    z-index: 99;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section-about__finder .section-heading .superscription {
+    margin-bottom: 30px;
+    color:#fff;
+}
+.section-about__finder .section-heading .title{
+    color:#fff;
+    font-size: 28px;
+        font-size: 2vw;
+    text-align: center;
+}
+
+.section-about__finder .finder__numbers .finder__number{
+    margin-bottom: 20px;
+}
+.section-about__finder .finder__numbers .finder__number .num{
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1.3;
+    margin-right: 10px;
+    color:var(--main)
+}
+.section-about__finder .finder__numbers .finder__number p{
+    font-size: 21px;
+    color: #fff;
+}
+
+.section-about__trust:before {
+    content: "";
+    width: 1px;
+    height: 236px;
+    background: var(--main);
+    position: absolute;
+    top: -110px;
+    left: 45px;
+}
+
+.section-about__trust {
+    padding-left: 80px;
+    position: relative;
+}
+
+.section-about__trust .title {
+    font-size: 48px;
+    font-weight: 300;
+    color: #000;
+    line-height: 1.3;
+    margin-top: 35px;
+}
+.section-about__trust .title b {
+    font-weight: 900;
+}
+
+.section-about__trust .area:before,
+.section-about__trust .area:after {
+    content: "";
+    width: 184px;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-about__trust .area:before {
+    top: -2px;
+    background: #f1e7d4;
+}
+
+.section-about__trust .area {
+    background: #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 5px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    text-align: center;
+    padding: 30px 15px;
+    margin-top: 60px;
+    position: relative;
+}
+
+.section-about__trust .area:after {
+    height: 4px;
+    bottom: -4px;
+    background: #e2ded6;
+}
+
+.section-about__trust .area span {
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--main);
+    line-height: 1.2;
+}
+
+.section-about__trust .area sup {
+    font-size: 26px;
+}
+
+.section-about__trust .area p {
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.section-about__description {
+    padding-left: 45px;
+}
+
+.section-about__description img {
+    margin-top: 90px;
+    float: right;
+}
+
+.section-investment:before {
+    content: "";
+    width: 12%;
+    min-width: 260px;
+    height: 1px;
+    background: var(--main);
+    position: absolute;
+    top: 30px;
+    left: 0;
+}
+
+.section-investment {
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.section-investment__panel {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.slider-investment.owl-carousel {
+    background: #f4f4f4;
+}
+
+.slider-investment.owl-carousel:before {
+    content: "";
+    width: 35px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -1px;
+    -webkit-box-shadow: inset 20px 1px 35px -30px rgba(66, 68, 90, 0.3);
+    -moz-box-shadow: inset 20px 1px 35px -30px rgba(66, 68, 90, 0.3);
+    box-shadow: inset 20px 1px 35px -30px rgba(66, 68, 90, 0.3);
+    z-index: 99;
+}
+
+.section-investment__wrapper {
+    max-width: 775px;
+    float: right;
+}
+.section-investment__wrapper .col-xl-6 {
+    margin: 0;
+    padding: 0px;
+}
+
+.section-investment__article  {
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+.section-investment__article .section-heading {
+    padding-bottom: 30px;
+}
+
+.section-investment__article .section-content .btn {
+    margin-top: 55px;
+}
+
+.section-investment__nav {
+    background: #f4f4f4;
+    padding: 30px 55px 30px 20px;
+    width: 100%;
+    /* max-width: 415px; */
+    min-height: 530px;
+    float: right;
+}
+
+.section-investment__nav button {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    background: transparent;
+    border: 0;
+    text-align: right;
+    cursor: pointer;
+    padding: 15px;
+    position: relative;
+}
+
+.section-investment__nav .active button:before {
+    content: "";
+    width: 2px;
+    height: 44px;
+    background: var(--main);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+
+.section-investment__nav .active button {
+    -webkit-box-shadow: 40px 15px 30px -30px rgba(66, 68, 90, 0.5);
+    -moz-box-shadow: 40px 15px 30px -30px rgba(66, 68, 90, 0.5);
+    box-shadow: 40px 15px 30px -30px rgba(66, 68, 90, 0.5);
+}
+
+.section-investment__nav button span {
+    font-size: 14px;
+    font-weight: 400;
+    color: #757575;
+    display: block;
+}
+
+.section-investment__nav .active button {
+    color: var(--main);
+}
+
+.section-investment__contact {
+    background: #fff;
+    width: 100%;
+    max-width: 415px;
+    float: right;
+    padding: 40px 5px 40px 5px;
+}
+
+.section-investment__contact a {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    opacity: 0.75;
+}
+
+.section-investment__contact a:hover {
+    opacity: 1;
+}
+
+.section-investment__contact span {
+    font-size: 18px;
+    color: #000;
+    font-weight: 700;
+    text-align: right;
+}
+
+.section-investment__background {
+    display: block;
+    height: 330px;
+    background-position: center center;
+    background-size: cover;
+    background-color: #f4f4f4;
+}
+
+.section-investment__details {
+    color: #000000;
+    background: #f4f4f4;
+    min-height: 200px;
+    padding: 30px 50px 45px 50px;
+    position: relative;
+    max-width: 665px;
+}
+
+.section-investment__details .more {
+    position: absolute;
+    top: -32px;
+    right: 0;
+    opacity: 0.9;
+}
+
+.section-investment__details .more:hover {
+    opacity: 1;
+    transform: rotate(15deg) scale(1.01) translateY(10px);
+}
+
+.section-investment__details .more i {
+    width: 118px;
+    height: 118px;
+    background: url(../../images/icons/investment-arrow-icon.png);
+    display: block;
+    background-size: cover;
+}
+
+.section-investment__details .title {
+    font-size: 26px;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding-right: 70px;
+}
+
+.section-investment__details p {
+    font-size: 12px;
+}
+
+.slider-investment .section-investment__attributes {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.slider-investment .section-investment__attributes--item {
+    display: flex;
+    align-items: center;
+    flex: 0 0 50%;
+    max-width: 50%;
+    gap: 24px;
+    margin: 15px 0;
+}
+
+.slider-investment  .section-investment__attributes--item p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #373737;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+}
+
+.slider-investment .section-investment__attributes--item span {
+    font-weight: 700;
+    display: flex;
+}
+
+.slider-investment .section-investment__attributes img {
+    width: auto;
+}
+
+ .section-slider .slide{
+    height: 100vh;
+    min-height: 750px!important;
+}
+
+.home #header .header__logo{
+    padding-left: 80px;
+}
+
+.home #header.sticky .header__logo{
+    padding-left: 0px;
+}
+
+@media (max-width: 1400px) {
+    .section-slider .slide__heading h2 {
+        font-size: 21px;
+    }
+    .section-about__trust .area span {
+        font-size: 36px;
+    }
+    .section-slider .slide__flats{
+        padding: 10px 25px;
+    }
+    .section-slider .slide__flats a{
+        font-size: 16px;
+    }
+    .section-about__trust .title {
+        font-size: 38px;
+    }
+    .section-about__finder .finder__numbers .finder__number .num{
+        font-size: 38px;
+    }
+    .section-about__finder {
+        color: #000000;
+        width: 100%;
+        height: 600px;
+        padding: 40px 30px;
+    }
+    .section-about__finder .btn{
+        display: block;
+        padding: 15px 30px;
+    }
+    .section-investment__background{
+        height: 250px;
+    }
+    .section-slider .slide__attributes--item p {
+     font-size: 14px;
+    }
+    .section-slider .slide__attributes{
+        gap: 10px;
+        margin-bottom: 40px;
+    }
+    .section-investment__details{
+        padding: 20px;
+    }
+    .section-investment__details .more i{
+        width: 60px;
+        height: 60px;
+    }
+    .section-investment__details .title {
+        font-size: 24px;
+        padding-right: 60px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .section-about__trust {
+        padding-left: 0px;
+    }
+    .section-about__description {
+        padding-top: 30px;
+        padding-left: 0;
+    }
+    .section-about__finder .section-heading .title {
+       font-size: 31px;
+    }
+     .section-about__finder  .section-heading .title span {
+        font-weight: 500;
+        font-size: 26px;
+        display: block;
+        line-height: 1.3;
+    }
+    .section-about__finder {
+        margin-left: 0px;
+    }
+    .section-about__trust:before {
+        left: -15px;
+    }
+    .section-about__description img {
+        margin-top: 20px;
+    }
+}
+@media (max-width: 1200px) {
+    .section-about__trust .area span {
+        font-size: 28px;
+    }
+    .home #header .header__logo {
+        padding-left: 50px;
+    }
+}
+@media (max-width: 996px) {
+    .header__navigation--contact a{
+        font-size: 12px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .section-slider .slide__description .btn {
+        margin-top: 20px;
+    }
+    .section-slider .slide__attributes {
+        margin-bottom: 20px;
+    }
+    .section-slider .slide__heading h2 {
+        font-size: 28px;
+    }
+     .section-slider .slide__attributes img {
+        width: auto;
+        max-width: 22px;
+        height: auto;
+    }
+    .section-slider .slide__attributes--item p {
+       font-size: 12px;
+    }
+    .section-about__finder .finder__numbers .finder__number .num {
+        font-size: 21px;
+    }
+    .section-about__finder{
+        height: inherit;
+        padding: 40px 20px;
+        text-align: center;
+        background-size: cover;
+    }
+    .section-about__finder .btn{
+        display: inline-block;
+        padding: 15px 70px 15px 30px;
+    }
+    .section-about__finder .section-heading{
+        margin-bottom: 30px;
+    }
+
+    .section-about__trust:before {
+        left: 0px;
+    }
+    .section-about__trust {
+        padding-left: 15px;
+        margin-top: 30px;
+    }
+    .section-about__trust .title {
+        font-size: 36px;
+        margin-top: 15px;
+    }
+    .section-about__description {
+        padding-top: 30px;
+        padding-left: 0;
+    }
+    .section-about__description img {
+        margin-top: 15px;
+        float: none;
+        width: 200px;
+        margin: 0 auto;
+        display: block;
+    }
+    
+/* }
+@media (max-width: 576px) { */
+    .section-investment__panel{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .section-investment__details {
+        padding: 20px;
+    }
+    .slider-investment .section-investment__attributes--item {
+        gap: 10px;
+    }
+    .slider-investment .section-investment__attributes--item p{
+        font-size: 11px;
+    }
+    .section-investment__details .more i {
+        width: 80px;
+        height: 80px;
+    }
+    .section-investment__details .more  {
+      top:-80px;
+    }
+    .section-investment{
+        padding: 30px 0 0;
+    }
+    .section-investment__article{
+        margin-bottom: 50px;
+    }
+    .section-investment__article .section-content .btn{
+        width: 100%;
+    }
+    .section-investment__article .section-heading {
+        padding-bottom: 15px;
+        padding-top: 35px;
+    }
+    .section-investment__nav {
+        max-width: 100%;
+    }
+
+
+    .slide__wrapper{
+        display: block;
+        flex-wrap: wrap;
+    }
+    .slide__attributes{
+        width: 100%;
+        order:2;
+        display: block!important;
+    }
+    .slide__container{
+        width: 100%;
+        order:1;
+    }
+    .slider-main-nav{
+        /* display: none; */
+            width: 40px!important;
+    }
+    .section-slider .slide {
+        padding: 0px;
+
+    }
+    .section-slider .slide__heading h2 {
+        font-size: 21px;
+    }
+    .section-slider .slide__container {
+        flex-wrap: wrap;
+    }
+    .slide__flats{
+        display: none!important;
+    }
+   
+    .section-slider .slide__attributes--item {
+        margin-bottom: 10px;
+    }
+    .section-slider .slide{
+        padding-left: 60px;
+    }
+    .home #header .header__logo{
+        padding-left: 30px;
+    }
+     .home #header.sticky .header__logo{
+        padding-left: 0px;
+    }
+    
+}

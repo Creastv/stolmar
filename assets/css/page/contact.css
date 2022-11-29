@@ -1,0 +1,352 @@
+:root {
+  --main: #b70e1c;
+  --white: #fff;
+}
+#page-content {
+    padding-top: 85px;
+    padding-bottom: 85px;
+}
+/* .page-contact{
+    margin-top: 50px;
+} */
+.page-contact__main .title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #000;
+    line-height: 1;
+    margin-bottom: 30px;
+    padding: 0;
+}
+.page-contact__main{
+    margin-bottom: 50px;
+}
+.page-contact__address {
+    display: flex;
+    align-items: start;
+    gap: 75px;
+    margin-bottom: 30px;
+}
+
+.page-contact__address img {
+    margin-top: 10px;
+}
+
+.page-contact__address address {
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.page-contact__address p {
+    margin: 0;
+    padding: 0;
+}
+
+.page-contact__address .btn {
+    font-size: 14px;
+    padding: 0 94px 0 0;
+    box-shadow: none;
+    margin-top: 40px;
+}
+
+.page-contact__form .title {
+    margin-bottom: 20px;
+}
+
+.page-contact__form .wpcf7 {
+    margin-top: 15px;
+}
+
+.page-contact__form .btn {
+    display: flex;
+    justify-content: end;
+    margin-top: 25px;
+}
+
+.page-contact__form .wpcf7-spinner {
+    position: absolute;
+    left: auto;
+    right: 275px;
+    bottom: 14px;
+}
+
+.page-contact__welcome {
+    position: relative;
+    padding: 60px 0;
+}
+
+.page-contact__welcome .container {
+    max-width: 1400px;
+}
+
+.page-contact__welcome .line {
+    width: 50%;
+    height: 1px;
+    background: var(--main);
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+
+.page-contact__welcome-content {
+    background: #fff;
+    position: relative;
+    z-index: 99;
+}
+
+.page-contact__welcome p {
+    font-family: 'Poppins', sans-serif;
+    color: var(--main);
+    padding-left: 45px;
+}
+
+.page-contact-state {
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-contact-state .section-heading {
+    max-width: 320px;
+}
+
+.page-contact-state .section-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1120px;
+    border-width: 1px 0 1px 1px;
+    border-style: solid;
+    border-color: #e5e5e5;
+    min-height: 115px;
+    position: relative;
+    margin-right: 47px;
+    padding: 15px 30px;
+}
+
+.page-contact-state .section-content:after {
+    content: "";
+    width: 47px;
+    height: 115px;
+    background: url(../../images/arrow-contact-bg.jpg);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -47px;
+}
+
+.page-contact-state .section-content > div {
+    display: flex;
+    align-items: center;
+}
+
+.page-contact-state .state {
+    margin-right: 30px;
+}
+
+.page-contact-state .state span {
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.page-contact-state .state p {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 5px 0 0 0;
+    padding: 0;
+}
+
+.page-contact-state .mobile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.page-contact-state .mobile a {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.page-contact-state .mobile span {
+    font-weight: 300;
+}
+
+.page-contact-state img {
+    width: auto;
+    animation: heartbeat 2.5s infinite;
+    max-height: 40px;
+}
+
+.page-contact-item {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    -webkit-transition: all .75s linear;
+    transition: all .75s linear;
+
+    margin-bottom: 15px;
+    /* height: calc(100% - 30px); */
+    border: 1px solid #fff;
+
+}
+
+.page-contact-item:hover {
+    box-shadow: rgba(50, 50, 93, 0.55) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.page-contact-container {
+    margin-top: 15px;
+}
+.page-contact .page-contact-container .map{
+    padding-left: 50px;
+}
+
+.page-contact-featured {
+    position: relative;
+}
+.page-contact-featured img {
+    width: 100%;
+    height: auto;
+}
+.page-contact-featured span {
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    background: #d7af60;
+    display: inline-block;
+    padding: 15px 20px;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+
+.page-contact-content {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 70%, rgba(0, 0, 0, 0) 100%);
+    position: relative;
+    margin: -100px -1px -1px -1px;
+    padding: 30px;
+}
+
+.page-contact-content .title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+#main .page-contact-content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#main .page-contact-content li {
+    display: flex;
+    padding: 10px 0;
+}
+
+#main .page-contact-content li div {
+    min-width: 25px;
+    text-align: center;
+    margin-right: 15px;
+}
+
+#main .page-contact-content ul a {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#main .page-contact-content ul span {
+    font-weight: 300;
+}
+
+#main .page-contact-content img {
+    width: auto;
+    height: 21px;
+}
+
+.page-contact-content .btn {
+    font-size: 14px;
+    padding: 0 75px 0 0;
+    box-shadow: none;
+    margin-top: 30px;
+}
+@media (max-width: 1400px) {
+ .page-contact-state .mobile a{
+    font-size: 31px;
+ }
+}
+@media (max-width: 1300px) {
+ .page-contact-state .mobile a{
+    font-size: 24px;
+ }
+ .page-contact-state .state p {
+    font-size: 21px;
+ }
+}
+@media (max-width: 1200px) {
+  .page-contact-state .mobile a{
+    font-size: 21px;
+ }
+ .page-contact-state .section-heading {
+    max-width: 100%;
+    margin-bottom: 30px; 
+}
+.page-contact__main .title {
+    font-size: 28px;
+    }
+}
+
+@media (max-width: 992px) {
+    .page-contact-state{
+    flex-wrap: wrap;
+ }
+    .page-contact-state .mobile a {
+        font-size: 18px;
+    }
+    .page-contact-state .state p {
+        font-size: 16px;
+    }
+    .page-contact__address{
+        margin-bottom: 50px;
+    }
+
+    
+}
+@media (max-width: 1000px) {
+    .page-contact__form{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .page-contact .page-contact-container .map{
+        padding-left: 0px;
+    }
+}
+@media (max-width: 768px) {
+    .page-contact-state .state{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .page-contact-state .section-content > div{
+        flex-wrap: wrap;
+    }
+    .page-contact-state .section-content{
+        padding: 10px;
+    } 
+}
+
+@media (max-width: 576px) {
+    .page-contact-state .section-content{
+        flex-wrap: wrap;
+    }
+    .page-contact-state .section-content > div:nth-child(1){
+        margin-bottom: 15px;
+    }
+    .page-contact__address{
+        gap:30px;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+    }
+    .page-contact__form .btn {
+        justify-content: center;
+        width: 100%;
+    }
+}

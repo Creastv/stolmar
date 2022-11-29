@@ -1,0 +1,36 @@
+#page-content {
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+.page-full__background {
+    background-image: url(../../images/cooperation-bg.jpg);
+}
+
+.page-full__content .section-heading .line {
+    content: "";
+    width: 1px;
+    height: 100%;
+    background: #c09056;
+    position: absolute;
+    top: -15px;
+    left: -25px;
+}
+
+.page-full__content .section-heading {
+    padding: 30px 0;
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.page-full__contact p {
+    line-height: 1.6;
+    font-size: 12px;
+    margin: 0;
+    padding-bottom: 15px;
+}
+
+.page-full__contact a {
+    font-size: 30px;
+    font-weight: 700;
+}

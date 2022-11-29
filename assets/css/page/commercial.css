@@ -1,0 +1,48 @@
+.commercial-inv{
+    margin-top: 50px;
+}
+.commercial-inv-wraper{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+.commercial-inv--left{
+    width: 60%;
+}
+.commercial-inv--left img{
+    width: 100%;
+    height: auto;
+}
+
+.commercial-inv--right{
+    width: 40%;
+    padding: 30px;
+}
+
+.commercial-inv--name{
+    margin-bottom: 40px;
+}
+.commercial-inv--name p{
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom:0px;
+    padding-bottom: 0px;
+}
+.commercial-inv--name{}
+
+.commercial-inv--local a{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .commercial-inv--left{
+        width: 100%;
+    }
+    .commercial-inv--right{
+        width: 100%;
+    }
+}

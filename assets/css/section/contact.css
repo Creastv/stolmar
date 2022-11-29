@@ -1,0 +1,222 @@
+.section-contact {
+    color: #fff;
+    padding: 0;
+    margin: 60px 0;
+
+}
+
+.section-contact__wrapper {
+    width: 100%;
+    background: #000 url(../../images/contact-bg.png) center center no-repeat;
+    position: relative;
+    padding: 0 90px;
+}
+
+.section-contact__wrapper:before,
+.section-contact__wrapper:after {
+    content: "";
+    height: 210px;
+    position: absolute;
+    top: 0;
+}
+
+.section-contact__wrapper:before {
+    width: 90px;
+    background: url(../../images/contact-left-corner.jpg);
+    left: 0;
+}
+
+.section-contact__wrapper {
+    height: 210px;
+}
+.section-contact__wrapper .row {
+    justify-content: center;
+    padding: 0 20px;
+    align-items:center ;
+    flex-wrap: nowrap;
+}
+
+.section-contact__wrapper:after {
+    width: 86px;
+    background: url(../../images/contact-right-corner.jpg);
+    right: 0;
+}
+
+.section-contact__wrapper .row {
+    height: 100%;
+}
+
+.section-contact__meet {
+    text-align: right;
+    padding-right: 30px;
+}
+
+.section-contact__meet span {
+    font-size: 18px;
+}
+
+.section-contact__meet p {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 10px 0 0 0;
+    padding: 0;
+}
+
+.section-contact__phone {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    gap: 25px;
+}
+
+.section-contact__phone img {
+    margin-right: 25px;
+    animation: heartbeat 2.5s infinite;
+}
+
+.section-contact__phone a {
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.section-contact__phone a span {
+    font-weight: 400;
+}
+
+
+@media (max-width: 1400px) {
+    .section-contact__phone a {
+        font-size: 30px;
+        font-weight: 700;
+        color: #fff;
+    }
+}
+@media (max-width: 1350px) {
+
+}
+@media (max-width: 1300px) {
+    .section-contact__meet p {
+        font-size: 41px;
+    }
+    .section-contact__phone a {
+        font-size: 24px;
+    }
+}
+@media (max-width: 1200px) {
+    .section-contact__meet p {
+        font-size: 31px;
+    }
+    .section-contact__phone a {
+        font-size: 18px;
+    }
+    .section-contact__phone img {
+        margin-right: 35px;
+    }
+}
+
+@media (max-width: 992px) {
+    .section-contact__wrapper{
+        background-size: 80%;
+    }
+    .section-contact__wrapper .row > div:nth-child(1){
+        width: 30%;
+    }
+    .section-contact__wrapper .row > div:nth-child(2) {
+        width: 70%;
+    }
+    .section-contact__meet{
+        padding-right: 0;
+    }
+    .section-contact__phone{
+        padding-left: 0;
+        gap: 10px;
+    }
+    .section-contact__phone img {
+        margin-right: 10px;
+        margin-left: 30px;
+    }
+    .section-contact__phone a {
+       font-size: 21px;
+    }
+    .section-contact__meet p {
+       font-size: 22px;
+    }
+    .section-contact__meet span {
+        font-size: 16px;
+    }
+    
+  
+}
+@media (max-width: 768px) {
+    .section-contact__wrapper{
+        background: #000;
+        padding: 20px;
+    }
+    .section-contact__wrapper .row {
+        flex-wrap: wrap;
+    }
+    .section-contact__wrapper .row > div:nth-child(1),
+    .section-contact__wrapper .row > div:nth-child(2) {
+        width: 100%;
+    }
+
+    .section-contact__meet {
+    text-align: center;
+    }
+    .section-contact__phone {
+        padding-left: 0;
+        justify-content: center;
+    }
+    .section-contact__wrapper {
+        background-size: cover;
+    }
+      .section-contact__phone{
+        gap: 10px;
+    }
+    .section-contact__phone{
+        display: flex;
+        padding: 10px 0;
+    }
+    .section-contact__phone img {
+
+        width: 24px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-contact__wrapper{
+        height: initial;
+        background-size: cover;
+        padding: 20px;
+    }
+    .section-contact__wrapper:after, .section-contact__wrapper:before {
+        display: none;
+    }
+    .section-contact__meet {
+        padding-right: 0;
+        text-align: center;
+    }
+    .section-contact__phone{
+        display: flex;
+        align-items: center;
+        /* padding-left: 30px; */
+        justify-content: center;
+        padding: 10px 0;
+    }
+    .section-contact__phone img {
+        margin-right: 17px;
+        animation: heartbeat 2.5s infinite;
+        width: 24px;
+    }
+    .section-contact__phone a {
+        font-size: 18px;
+    }
+    
+    .section-contact__meet p {
+       font-size: 31px;
+    }
+  
+
+}

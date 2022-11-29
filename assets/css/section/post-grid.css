@@ -1,0 +1,105 @@
+
+:root {
+  --main: #b70e1c;
+  --white: #fff;
+}
+.section-post-grid {
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    position: relative;
+    align-items: center;
+    overflow: hidden;
+}
+.section-post-grid::before {
+    content: "";
+    width: 12%;
+    min-width: 260px;
+    height: 1px;
+    background: var(--main);
+    position: absolute;
+    top: 30px;
+    left: 0;
+}
+
+.section-post-grid__article {
+    max-width: 320px;
+    padding-top: 45px;
+}
+.section-post-grid__article .section-heading {
+    padding-bottom: 45px;
+}
+
+.section-post-grid__article .btn {
+    margin-top: 45px;
+}
+
+.section-post-grid__posts {
+    position: relative;
+    width: 100vw;
+}
+.section-investment__grid{
+    display: flex;
+    flex-wrap: wrap;
+}
+.section-investment__grid--item{
+    width: 50%;
+    padding: 15px;
+
+}
+.section-investment__grid .section-investment__attributes{
+    display: flex;
+    flex-wrap: wrap;
+}
+.section-investment__grid .section-investment__attributes--item{
+    width: 50%;
+    display: flex;
+    gap: 20px;
+    padding-right: 15px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.section-investment__grid  .section-investment__details .title {
+    display: block;
+    margin-bottom: 20px;
+}
+@media (max-width: 1400px) {
+
+}
+@media (max-width: 1200px) {
+    
+    .section-post-grid__article{
+        max-width: 100%;
+    }
+     .section-investment__contact{
+        max-width: 100%!important;
+        display: flex;
+        justify-content: center;
+    }
+}
+@media (max-width: 768px) {
+    .section-post-grid__article{
+        max-width: 100%;
+    }
+    .section-post-grid__article .btn {
+        text-align: center;
+        width: 100%;
+    }
+    .section-investment__grid--item{
+        width: 100%;
+        padding: 0 0 10px 0;
+    }
+
+
+}
+@media (max-width: 560px) {
+    .section-investment__grid .section-investment__attributes--item{
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        padding-right: 15px;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+}

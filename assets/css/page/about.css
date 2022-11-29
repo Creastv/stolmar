@@ -1,0 +1,282 @@
+:root {
+  --main: #b70e1c;
+  --white: #fff;
+}
+.page-id-3978 #page-content{
+    overflow: hidden;
+}
+#page-content {
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+.page-full__background {
+    background-image: url(../../images/about-bg.jpg);
+}
+
+.page-about__history {
+    display: flex;
+    padding-bottom: 55px;
+}
+
+.page-about__history > div {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    position: relative;
+    padding: 20px 0;
+}
+
+.page-about__history .line {
+    content: "";
+    width: 1px;
+    height: 156px;
+    background: var(--main);
+    position: absolute;
+    top: -10px;
+    left: -25px;
+}
+
+.page-about__history p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.45
+}
+
+.page-about__history .title {
+    font-size: 24px;
+    color: #000;
+    font-weight: 700;
+}
+
+.page-about__history .title span {
+    font-size: 48px;
+}
+
+.page-about__history .subtitle {
+    font-size: 18px;
+    font-weight: 300;
+    color: #000;
+}
+
+.page-about__content p {
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.page-about__content p.large {
+    font-size: 16px;
+    font-weight: 700;
+}
+.page-about__content .bullets--item{
+
+
+} 
+.page-about__content .bullets--item p{
+    font-size: 24px;
+    text-align: left;
+}
+.page-about__content .bullets--item .num{
+    color: var(--main);
+    font-size: 41px;
+    font-weight: 700;
+} 
+
+.page-about__title {
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+.page-about__experience:before {
+    content: "";
+    width: 260px;
+    height: 1px;
+    background: var(--main);
+    position: absolute;
+    top: 50px;
+    left: -130px;
+}
+
+
+.page-about__columns{
+    margin-top: 50px;
+}
+
+.page-about__experience {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 80px 20px;
+}
+ .page-about__right:after {
+    content: "";
+    width: 260px;
+    height: 100%;
+    background: #eeeeee;
+    position: absolute;
+    top: 0px;
+    right: -259px;
+}
+
+
+ .page-about__right{
+    background-color: #eeeeee;
+}
+.page-about__experience .section-heading {
+    max-width: 250px;
+}
+
+.page-about__experience .section-heading .title{
+    font-size: 38px;
+}
+
+.page-about__experience  .btn{
+    font-size: 16px;
+    padding: 17px 64px 17px 40px;
+    background-size: 20px;
+}
+
+.page-about__logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.page-about__logos > div {
+    width: calc(25% - 30px);
+    height: 136px;
+    background: #fff;
+    box-shadow: rgba(50, 50, 93, 0.05) 0px -10px 27px -5px, rgba(0, 0, 0, 0.1) 0px 8px 16px -8px;
+    transition: all 300ms ease-out 0s;
+}
+
+.page-about__logos > div:hover {
+    box-shadow: rgba(50, 50, 93, 0.1) 0px -10px 27px -5px, rgba(0, 0, 0, 0.15) 0px 8px 16px -8px;
+    transform: scale(1.01) translateY(-10px);
+}
+
+.page-about__logos > div a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.page-about__logos > div img {
+    width: auto;
+    max-height: 100%;
+}
+
+.page-about__banner {
+    display: flex;
+    align-items: center;
+    height: 620px;
+    background: url(../../images/about-banner-bg.jpg) center center;
+    background-position: 34%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.page-about__banner .superscription {
+    margin-bottom: 30px;
+
+}
+
+.page-about__banner .btn {
+    margin-top: 120px;
+}
+
+@media (max-width: 1400px) {
+    .page-about__history .title span {
+        font-size: 41px;
+    }
+    .page-about__history .subtitle {
+    font-size: 16px;
+    }
+    .page-about__experience .section-heading .title{
+        font-size: 31px;
+    }
+    .page-about__experience .btn {
+        font-size: 14px;
+        padding: 15px 45px 15px 15px;
+        background-size: 20px;
+    }
+}
+@media (max-width: 1350px) {
+    .page-about__history .title span {
+        font-size: 36px;
+    }
+    .page-about__history .subtitle {
+    font-size: 14px;
+    }
+}
+@media (max-width: 1300px) {
+    .page-about__history .title span {
+        font-size: 31px;
+    }
+    .page-about__content .bullets--item .num{
+        font-size: 31px;
+    } 
+
+}
+@media (max-width: 1200px) {
+    .page-about__history .title {
+        font-size: 21px;
+    }
+    .page-about__history .subtitle {
+    font-size: 12px;
+    }
+    .page-about__logos{
+        gap:10px;
+    }
+    .page-about__logos > div{
+        width: calc(33.333% - 10px);
+    }
+}
+
+@media (max-width: 992px) {
+  
+}
+
+@media (max-width: 768px) {
+    .page-about__logos > div{
+        width: calc(50% - 10px);
+    }
+    .page-about__experience{
+        padding: 50px 20px;
+    }
+    .page-about__experience:before {
+        top: 10px;
+    }
+
+
+}
+
+@media (max-width: 576px) {
+    .page-about__history{
+        flex-wrap: wrap;
+    }
+    .page-about__banner {
+        background-position: 2%;
+    }
+    .page-about__history > div {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .page-about__history .line{
+        width: 100%;
+        height: 1px;
+            top: 8px;
+    }
+    .page-about__experience{
+        flex-wrap: wrap;
+    }
+    .page-about__experience .section-heading .title{
+        margin-bottom: 20px;
+    } 
+    .page-about__experience{
+        padding: 30px 0px;
+    }
+}
