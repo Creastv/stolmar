@@ -519,17 +519,21 @@
     position: absolute;
     left: 32%;
     bottom: 32%;
-    border: 3px solid #ba9855;
-    background: #caa55c;
-    text-shadow: 1px 1px 1px #d5b676;
+    border: 3px solid rgba(0,0,0, 0.5);
+    background: var(--main);
+    text-shadow: 1px 1px 1px var(--main);
 }
 
 .section-flats .tooltip-content .floor-item {
     font-weight: 700;
     font-size: 112px;
-    color: #000;
+    color: #fff;
     line-height: 1;
     text-align: center;
+}
+.section-flats .tooltip-content span {
+    color:#fff;
+    font-size: 14px;
 }
 
 .section-flats .tooltip-content .floor-item.floor {
