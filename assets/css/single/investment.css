@@ -517,8 +517,9 @@
     width: 200px;
     height: 200px;
     position: absolute;
-    left: 32%;
-    bottom: 32%;
+    right: 0%;
+    top: 50%;
+    transform: translate(-300px, -50%);
     border: 3px solid rgba(0,0,0, 0.5);
     background: var(--main);
     text-shadow: 1px 1px 1px var(--main);
