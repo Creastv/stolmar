@@ -353,7 +353,7 @@ h6 {
 
 
 .header__navigation--contact a {
-    font-size: 18px;
+    font-size: 21px;
     color: #fff;
     display: flex;
     align-items: center;
@@ -713,7 +713,7 @@ body.open {
         gap: 15px;
     }
     .header__navigation--contact a{
-        font-size: 16px;
+        font-size: 21px;
         display: flex;
         align-items: center;
     }
