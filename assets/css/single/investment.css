@@ -962,12 +962,12 @@
         position: inherit;
         padding-left: 15px;
     }
-    .section-flats .tooltip-content{
+    /* .section-flats .tooltip-content{
         position: inherit;
         width: 100%;
         left: 0;
         height: inherit;
-    }
+    } */
     .section-table .section-heading .heading{
         padding-right: 50px;
     }
@@ -1010,6 +1010,7 @@
     }
      .section-flats .tooltip-content{
         transform: inherit!important;
+            padding: 20px;
     }
 }
 @media (max-width: 996px) {
