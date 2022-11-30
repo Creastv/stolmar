@@ -25,7 +25,7 @@ function cpt_flats() {
 		'taxonomies'         => array( 'flats_tax' ),
 		'public'             => true,
 		'show_in_rest'       => true,
-		'publicly_queryable' => true,
+		'publicly_queryable' => false,
 		'show_ui'            => true,
 		'show_in_menu'       => true,
 		'query_var'          => true,
