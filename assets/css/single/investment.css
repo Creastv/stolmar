@@ -967,6 +967,7 @@
         width: 100%;
         left: 0;
         height: inherit;
+        transform: translate(0,0)!important;
     }
     .section-table .section-heading .heading{
         padding-right: 50px;
