@@ -75,7 +75,7 @@
 
 .section-slider__details .btn {
     border: 1px solid var(--main);
-    background: transparent url(../../images/icons/arrow-white-icon.png) no-repeat center right 20px;
+    background: var(--main) url(../../images/icons/arrow-white-icon.png) no-repeat center right 20px;
     color: #fff;
 }
 
@@ -131,7 +131,7 @@
 }
 
 .section-about__description .title {
-    font-size: 48px;
+    font-size: 31px;
     font-weight: 700;
     color: #000;
     line-height: 1;
