@@ -967,8 +967,6 @@
         width: 100%;
         left: 0;
         height: inherit;
-        /* transform: translate(0,0)!important; */
-        transform: inherit!important;
     }
     .section-table .section-heading .heading{
         padding-right: 50px;
@@ -1009,6 +1007,9 @@
     }
     .has-slider .header__logo{
         padding-left: 50px;
+    }
+     .section-flats .tooltip-content{
+        transform: inherit!important;
     }
 }
 @media (max-width: 996px) {
