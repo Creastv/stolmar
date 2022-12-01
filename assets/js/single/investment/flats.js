@@ -36,7 +36,7 @@ var oldStart = 0;
         function (settings, data, dataIndex) {
             var min = parseFloat($('#min').val(), 10);
             var max = parseFloat($('#max').val(), 10);
-            var size = parseFloat(data[4]) || 0;
+            var size = parseFloat(data[3]) || 0;
 
             if (
                 (isNaN(min) && isNaN(max)) ||
@@ -76,7 +76,6 @@ var oldStart = 0;
         },
         columns: [
             {data: 'name', className: "flat_name",  width: "30px",},
-            {data: 'building', className: "flat_building",  width: "30px" },
             {data: 'floor', className: "flat_floor",  width: "30px" },
             {data: 'rooms', className: "flat_rooms",  width: "30px" },
             {data: 'area', className: "flat_area",  width: "30px" },
@@ -84,14 +83,14 @@ var oldStart = 0;
             {data: 'garden', className: "flat_garden",  width: "30px" },
             {data: 'sold_status', className: "flat_sold_status",  width: "30px" },
             {data: 'price', className: "flat_price",  width: "30px" },
-            {data: 'pdf', className: "flat_pdf",  width: "30px" },
-            {data: '3d', className: "flat_3d",  width: "30px" },
-            {data: 'answer', className: "flat_answer",  width: "430px",},
+            {data: 'pdf', className: "flat_pdf",  width: "50px" },
+            {data: '3d', className: "flat_3d",  width: "50px" },
+            {data: 'answer', className: "flat_answer",  width: "130px",},
         ],
         columnDefs: [
             {
                 orderable: false,
-                targets: [ 9, 10, 11]
+                targets: [ 8, 9, 10]
             },
             {
                 // "targets": [ 9, 10, 11 ],
@@ -103,11 +102,11 @@ var oldStart = 0;
     });
 
     $('#flat_rooms').on('change', function () {
-        table.columns(3).search(this.value).draw();
+        table.columns(2).search(this.value).draw();
     });
 
     $('#flat_floor').on('change', function () {
-        table.columns(2).search(this.value).draw();
+        table.columns(1).search(this.value).draw();
     });
 
    

@@ -83,7 +83,6 @@ $args = array(
                     <thead>
                     <tr role="row">
                         <th data-priority="0" >Nr. Lokalu</th>
-                        <th data-priority="11">Nr. Budynku</th>
                         <th data-priority="3">Piętro</th>
                         <th data-priority="4">L.pokoi</th>
                         <th data-priority="5" >Metraż</th>
@@ -122,9 +121,7 @@ $args = array(
 						?>
 
                         <tr class="<?php echo $inf ?>">
-                            <td class="sorting"> 
-                            <?php echo get_field( 'name' );?></td>
-                            <td class="sorting"><?php echo get_field( 'building' ) ?: '---'; ?></td>
+                            <td class="sorting"><?php echo get_field( 'name' );?></td>
                             <td class="sorting"><?php echo get_field( 'floor' ) == "0" ? 'Parter' : get_field( 'floor' ) ?></td>
                             <td class="sorting"><?php echo get_field( 'rooms' ) ?: '---'; ?></td>
                             <td class="sorting"><?php echo number_format( get_field( 'area' ), 2, '.', '' ); ?> <span></span></td>
