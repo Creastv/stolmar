@@ -17,8 +17,8 @@ function enqueue_scripts() {
 	wp_register_script( 'stolmar-data-tables', 'https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js', array( 'jquery' ), false, true );
 	wp_register_script( 'stolmar-data-tables-natural', 'https://cdn.datatables.net/plug-ins/1.10.16/sorting/natural.js', array(), false, true );
 	wp_register_script( 'stolmar-data-tables-responsive', 'https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js', array(), false, true );
-    if(is_single(4095)) { 
-	wp_register_script( 'stolmar-single-flats', STOLMAR_DIRECTORY_URI . '/assets/js/single/investment/flats-zielona-podkowa.js', array( 'jquery' ), '1.0.0', true );
+    if(is_single(4490)) { 
+	wp_register_script( 'stolmar-single-flats', STOLMAR_DIRECTORY_URI . '/assets/js/single/investment/flats-korczak.js', array( 'jquery' ), '1.0.0', true );
 	} else {
 	wp_register_script( 'stolmar-single-flats', STOLMAR_DIRECTORY_URI . '/assets/js/single/investment/flats.js', array( 'jquery' ), '1.0.0', true );
 	}

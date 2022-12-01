@@ -52,7 +52,7 @@ $args = array(
                             </select>
                         </div>
 					<?php endif; ?>
-
+                    <?php if(!is_single(4490)){ ?>
 					<?php if ( ! empty( $filter['floor'] ) ): ?>
                         <div class="filter filter-floor">
                             <select id="flat_floor" name="flat_floor" class="form-control">
@@ -63,7 +63,8 @@ $args = array(
                             </select>
                         </div>
 					<?php endif; ?>
-                    <?php if(is_single(4095)){ ?>
+                    <?php } ?>
+                    <?php if(is_single(4490)){ ?>
                     <input id="building-id" class="form-control" type="text" placeholder="Nr budynku" value="">
                     <?php } ?>
 					<?php if ( ! empty( $filter['area'] ) ): ?>
@@ -83,7 +84,9 @@ $args = array(
                     <thead>
                     <tr role="row">
                         <th data-priority="0" >Nr. Lokalu</th>
+                        <?php if(!is_single(4490)){ ?>
                         <th data-priority="3">Piętro</th>
+                        <?php } ?>
                         <th data-priority="4">L.pokoi</th>
                         <th data-priority="5" >Metraż</th>
                         <th  data-priority="9" >Balkon</th>
@@ -122,7 +125,9 @@ $args = array(
 
                         <tr class="<?php echo $inf ?>">
                             <td class="sorting"><?php echo get_field( 'name' );?></td>
+                             <?php if(!is_single(4490)){ ?>
                             <td class="sorting"><?php echo get_field( 'floor' ) == "0" ? 'Parter' : get_field( 'floor' ) ?></td>
+                            <?php } ?>
                             <td class="sorting"><?php echo get_field( 'rooms' ) ?: '---'; ?></td>
                             <td class="sorting"><?php echo number_format( get_field( 'area' ), 2, '.', '' ); ?> <span></span></td>
                             <td><?php if(get_field( 'balcony' )) {  the_field( 'balcony' ); echo "<span></span>"; } else { echo "---"; }; ?> </td>

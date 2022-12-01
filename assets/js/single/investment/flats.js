@@ -83,7 +83,7 @@ var oldStart = 0;
             {data: 'garden', className: "flat_garden",  width: "30px" },
             {data: 'sold_status', className: "flat_sold_status",  width: "30px" },
             {data: 'price', className: "flat_price",  width: "30px" },
-            {data: 'pdf', className: "flat_pdf",  width: "50px" },
+            {data: 'pdf', className: "flat_pdf",  width: "0px" },
             {data: '3d', className: "flat_3d",  width: "50px" },
             {data: 'answer', className: "flat_answer",  width: "130px",},
         ],
@@ -114,7 +114,7 @@ var oldStart = 0;
     const dataFloor = $('[data-floor]');
 
     dataFloor.on("click", function () {
-        table.columns(1).search($(this).data('floor')).draw();
+        table.columns(2).search($(this).data('floor')).draw();
         $('#flat_floor').val($(this).data('floor')).change();
     });
 

@@ -36,7 +36,7 @@ var oldStart = 0;
         function (settings, data, dataIndex) {
             var min = parseFloat($('#min').val(), 10);
             var max = parseFloat($('#max').val(), 10);
-            var size = parseFloat(data[2]) || 0;
+            var size = parseFloat(data[4]) || 0;
 
             if (
                 (isNaN(min) && isNaN(max)) ||
@@ -75,21 +75,20 @@ var oldStart = 0;
             // formModal();
         },
         columns: [
-            {data: 'name', className: "flat_name",  width: "30px",},
-            {data: 'rooms', className: "flat_rooms",  width: "30px" },
-            {data: 'area', className: "flat_area",  width: "30px" },
-            {data: 'balkon', className: "flat_balkon",  width: "30px" },
-            {data: 'garden', className: "flat_garden",  width: "30px" },
-            {data: 'sold_status', className: "flat_sold_status",  width: "30px" },
-            {data: 'price', className: "flat_price",  width: "30px" },
-            {data: 'pdf', className: "flat_pdf",  width: "50px" },
-            {data: '3d', className: "flat_3d",  width: "50px" },
-            {data: 'answer', className: "flat_answer",  width: "130px",},
+            {data: 'name', className: "flat_name"},
+            {data: 'building', className: "flat_building"},
+            {data: 'floor', className: "flat_floor"},
+            {data: 'rooms', className: "flat_rooms"},
+            {data: 'area', className: "flat_area"},
+            {data: 'sold_status', className: "flat_sold_status"},
+            {data: 'price', className: "flat_price"},
+            {data: 'pdf', className: "flat_pdf"},
+            {data: 'answer', className: "flat_answer"},
         ],
         columnDefs: [
             {
                 orderable: false,
-                targets: [ 7, 8, 9]
+                targets: [7, 8]
             },
             {
                 // "targets": [ 9, 10, 11 ],
@@ -97,42 +96,49 @@ var oldStart = 0;
                 "searchable": true
             },
         ],
-        "order": [6, "ASC"]
+        "order": [[5, "desc"]]
     });
 
     $('#flat_rooms').on('change', function () {
-        table.columns(1).search(this.value).draw();
+        table.columns(3).search(this.value).draw();
     });
 
-    // $('#flat_floor').on('change', function () {
-    //     table.columns(1).search(this.value).draw();
-    // });
+    $('#flat_floor').on('change', function () {
+        table.columns(2).search(this.value).draw();
+    });
 
      $('#building-id').on( 'keydown', function () {
-        table.columns(0).search( this.value ).draw();
+    //    $('#building-id').val(this.value).change();
+        table.columns(1).search( this.value ).draw();
     } );
 
     const dataFloor = $('[data-floor]');
 
     dataFloor.on("click", function () {
+        // table.columns(2).search($(this).data('floor')).draw();
         $('#building-id').val($(this).data('floor')).change();
-        table.columns(0).search( $(this).data('floor') ).draw();
+        table.columns(1).search( $(this).data('floor') ).draw();
     });
+
     dataFloor.on("mouseover", function () {
         let floor = $(this).data('floor');
-        let status = $(this).data('status');
+        // let status = $(this).data('status');
+        let apartOne = $(this).data('apartone');
+        let apartTwo = $(this).data('aparttwo');
+        let apartOneStat = $(this).data('apartonestat');
+        let apartTwoStat = $(this).data('aparttwostat');
         const tooltip = $('.tooltip-content');
 
         tooltip.css("display", "flex");
-
-        if (floor > 0 && floor < 10) {
-            tooltip.html('<div class="floor-item floor">' + floor + '</div><span>piętro</span>');
-        } else if (floor === "Parter") {
-            tooltip.html('<div class="floor-item parter">Parter</div>');
-        } else {
-            tooltip.html('<div class="floor-item other">' + floor + '</div><span>' + status + '</span>');
-        }
+        
+        tooltip.html(`<div class="floor-item other">
+         <div class="bud"> <span>Budynek: </span>${floor}</div>
+         <div class="apart ${apartOneStat}"> ${apartOne} <span >${apartOneStat}</span></div>
+         <div class="apart ${apartTwoStat}">${apartTwo} <span >${apartTwoStat}</span></div>
+         </div>`);
     });
+
+   
 
     
 });

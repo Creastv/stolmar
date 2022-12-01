@@ -3,8 +3,8 @@
 	<?php
 	get_template_part('single/investment/slider');
 	get_template_part('single/investment/about');
-    if(is_single(4095)) { 
-	   get_template_part('single/investment/flats-zielona-podkowa');
+    if(is_single(4490)) { 
+	   get_template_part('single/investment/flats-korczaka');
 	} else {
 	   get_template_part('single/investment/flats');
 	}
