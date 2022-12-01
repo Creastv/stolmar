@@ -826,7 +826,7 @@ table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child:before,
     background-color: red!important;
     pointer-events: none;
 }
-.section-table tr.sprzedane .flat_name{
+.section-table tr.sprzedane .flat_name, .section-table tr.sprzedane .flat_3d, .section-table tr.sprzedane .flat_pdf, .section-table tr.sprzedane .flat_answer{
     pointer-events: none;
 }
 
