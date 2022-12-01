@@ -77,7 +77,7 @@
                             href="#flats-table"
                             coords="<?php echo $c['point']; ?>"
                             shape="poly"
-                            data-stat="<?php  echo $stat, ?>"
+                            data-stat="<?php  echo $stat; ?>"
                             data-floor="<?php echo $c['floor'] == "0" ? 'Parter' : $c['floor'] ?>"
                     >
 				<?php endforeach; ?>
