@@ -46,31 +46,10 @@
 					$fill_opacity = "";
 					$status = "";
 
-			        $apatOne = $c['mieszkanie_1'];
-                    $statOne = get_field( 'sold_status', $apatOne->ID);
-                    $apatTwo = $c['mieszkanie_2'];
-                    $statTwo = get_field( 'sold_status', $apatTwo->ID);
-                    if ( is_page_template( 'investment.php' ) ) {
-						switch ( $c['sold_status'] ) {
-							case 0;
-								$stroke_color = "005607";
-								$fill_color   = "009b0c";
-								$fill_opacity = "0.6";
+                    $dom= $c['dom'];
+                    $stat = get_field( 'sold_status', $dom->ID);
 
-								break;
-							case 1;
-								$stroke_color = "ff0000";
-								$fill_color   = "ff0000";
-								$fill_opacity = "0.4";
-								break;
-							case 2;
-								$stroke_color = "d5d5d5";
-								$fill_color   = "9a9a9a";
-								$fill_opacity = "0.6";
-								break;
-						}
-					} else {
-							switch ( $c['sold_status'] ) {
+							switch (  $stat ) {
 								case 0;
 									$stroke_color = "ddbd7c";
 									$fill_color   = "000000";
@@ -88,22 +67,17 @@
 									$fill_opacity = "0.6";
 									break;
 							}
-
-					}
-
-					
-                  
                         
 					?>
                     <area
                             data-maphilight='{"strokeColor":"<?php echo $stroke_color; ?>","strokeWidth":1,"fillColor":"<?php echo $fill_color; ?>","fillOpacity":<?php echo $fill_opacity; ?>}'
-						<?php if ( $c['sold_status'] == '0' && $flats['type'] == "flats" ): ?>
+						<?php if (  $stat == '0' && $flats['type'] == "flats" ): ?>
                             href="<?php echo isset( $c['url'] ) ? $c['url'] : '#flats-table'; ?>"
 						<?php endif; ?>
                             href="#flats-table"
                             coords="<?php echo $c['point']; ?>"
                             shape="poly"
-                            data-stat="<?php $c['sold_status']; ?>"
+                            data-stat="<?php  echo $stat, ?>"
                             data-floor="<?php echo $c['floor'] == "0" ? 'Parter' : $c['floor'] ?>"
                     >
 				<?php endforeach; ?>
