@@ -41,24 +41,24 @@ $bullets = get_field( 'bullets' );
         <div class="container page-about__columns">
             <div class="row">
                 <div class="col-12 col-lg-6 page-about__left">
-                    <?php if ( ! empty( $finished ) ): ?>
+                   
                         <div class="page-about__experience">
                             <div class="section-heading">
-                                <p class="title">Inwestycje zrealizowane</p>
+                                <p class="title"><?php the_field('tytul_bud'); ?></p>
                             </div>
-                             <a href="#" class="btn">wyszukaj mieszkanie</a>
+                             <a href="<?php the_field('link_bud'); ?>" class="btn"><?php the_field('url_bud'); ?></a>
                         </div>
-                    <?php endif; ?>
+
                 </div>
                 <div class="col-12 col-lg-6 page-about__right">
-                    <?php if ( ! empty( $finished ) ): ?>
+                 
                         <div class="page-about__experience">
                             <div class="section-heading">
-                                <p class="title">Inwestycje zrealizowane</p>
+                                <p class="title"><?php the_field('tytul'); ?></p>
                             </div>
-                            <a href="#" class="btn">zobacz nasze realizacje</a>
+                            <a href="<?php the_field('link'); ?>" class="btn"><?php the_field('url'); ?></a>
                         </div>
-                    <?php endif; ?>
+
                 </div>
             </div>
         </div>
