@@ -108,19 +108,14 @@ $args = array(
                                 $inf = "wolne";
 								break;
 							case 1;
-								$color = "green";
-                                $inf = "wolne";
-                                $num = 1;
+								$color = "red";
+                                $inf = "sprzedane";
+                                $num = 2;
 								break;
                             case 2;
 								$color = "orange";
                                 $inf = "zarezerwowane";
-                                $num = 2;
-								break;
-							case 3;
-								$color = "red";
-                                $inf = "sprzedane";
-                                $num = 3;
+                                $num = 1;
 								break;
 							
 						}
