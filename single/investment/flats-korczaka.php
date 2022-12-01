@@ -50,8 +50,8 @@
                     $statOne = get_field( 'sold_status', $apatOne->ID);
                     $apatTwo = $c['mieszkanie_2'];
                     $statTwo = get_field( 'sold_status', $apatTwo->ID);
-                         if ( is_page_template( 'investment.php' ) ) {
-						switch ( $c['status'] ) {
+                    if ( is_page_template( 'investment.php' ) ) {
+						switch ( $c['sold_status'] ) {
 							case 0;
 								$stroke_color = "005607";
 								$fill_color   = "009b0c";
@@ -70,7 +70,7 @@
 								break;
 						}
 					} else {
-							switch ( $c['status'] ) {
+							switch ( $c['sold_status'] ) {
 								case 0;
 									$stroke_color = "ddbd7c";
 									$fill_color   = "000000";
@@ -91,7 +91,7 @@
 
 					}
 
-					switch ( $c['status'] ) {
+					switch ( $c['sold_status'] ) {
 						case 0;
 							$status = "W sprzedaży";
 							break;
@@ -107,7 +107,7 @@
 					?>
                     <area
                             data-maphilight='{"strokeColor":"<?php echo $stroke_color; ?>","strokeWidth":1,"fillColor":"<?php echo $fill_color; ?>","fillOpacity":<?php echo $fill_opacity; ?>}'
-						<?php if ( $c['status'] == '0' && $flats['type'] == "flats" ): ?>
+						<?php if ( $c['sold_status'] == '0' && $flats['type'] == "flats" ): ?>
                             href="<?php echo isset( $c['url'] ) ? $c['url'] : '#flats-table'; ?>"
 						<?php endif; ?>
 						
@@ -119,7 +119,7 @@
                             data-stat="<?php echo $status; ?>"
                             data-floor="<?php echo $c['floor'] == "0" ? 'Parter' : $c['floor'] ?>"
                     >
-                    <?php $c['status'] ?>
+                    <?php $c['sold_status'] ?>
 				<?php endforeach; ?>
             </map>
 			<?php } ?>
