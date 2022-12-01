@@ -120,11 +120,11 @@ var oldStart = 0;
     });
     dataFloor.on("mouseover", function () {
         let floor = $(this).data('floor');
-        let apartOneStat = $(this).data('apartonestat');
+        let stat = $(this).data('stat');
         const tooltip = $('.tooltip-content');
 
         tooltip.css("display", "flex");
-        tooltip.html('<div class="floor-item other">' + floor + '</div><span>' + apartOneStat + '</span>');
+        tooltip.html('<div class="floor-item other">' + floor + '</div><span>' + stat + '</span>');
     });
 
     

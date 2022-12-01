@@ -106,8 +106,7 @@
                             href="#flats-table"
                             coords="<?php echo $c['point']; ?>"
                             shape="poly"
-                            data-apartone="<?php the_field( 'name', $apatOne->ID); ?> - <?php echo get_field( 'floor', $apatOne->ID) == "0" ? 'Parter' : "Piętro" ?>"
-                            data-apartonestat="<?php echo $c['status']; ?>"
+                            data-stat="<?php echo $c['status']; ?>"
                             data-floor="<?php echo $c['floor'] == "0" ? 'Parter' : $c['floor'] ?>"
                     >
                     <?php $c['status'] ?>
