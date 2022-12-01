@@ -51,21 +51,21 @@
 
 							switch (  $stat ) {
 								case 0;
-									$stroke_color = "ddbd7c";
-									$fill_color   = "000000";
+									$stroke_color = "077000";
+									$fill_color   = "077000";
 									$fill_opacity = "0.6";
                                     $status = "Wolny" ;
 
 									break;
 								case 1;
-									$stroke_color = "ff0000";
-									$fill_color   = "ff0000";
+									$stroke_color = "b50000";
+									$fill_color   = "b50000";
 									$fill_opacity = "0.4";
                                     $status = "Sprzedany" ;
 									break;
 								case 2;
-									$stroke_color = "d5d5d5";
-									$fill_color   = "9a9a9a";
+									$stroke_color = "b59f00";
+									$fill_color   = "b59f00";
 									$fill_opacity = "0.6";
                                     $status = "Zarezerwowany" ;
 									break;
