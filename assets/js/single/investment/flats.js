@@ -114,7 +114,7 @@ var oldStart = 0;
     const dataFloor = $('[data-floor]');
 
     dataFloor.on("click", function () {
-        table.columns(2).search($(this).data('floor')).draw();
+        table.columns(1).search($(this).data('floor')).draw();
         $('#flat_floor').val($(this).data('floor')).change();
     });
 
