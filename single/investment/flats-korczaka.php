@@ -53,7 +53,7 @@
 								case 0;
 									$stroke_color = "077000";
 									$fill_color   = "077000";
-									$fill_opacity = "0.6";
+									$fill_opacity = "0.8";
                                     $status = "Wolny" ;
 
 									break;
