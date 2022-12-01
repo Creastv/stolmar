@@ -110,13 +110,23 @@
 				<?php endforeach; ?>
             </map>
 			<?php } ?>
-            <div class="tooltip-content tooltip-content--zielona-podkowa"></div>
+            <div class="tooltip-content"></div>
+            <?php if ( $flats['place'] ){ ?>
+			<style>
+				.tooltip-content{
+					<?php echo $flats['place']; ?> 
+				}
+			</style>
+			<?php } else { ?>
+				<style>
+				.tooltip-content{
+					transform: translate(-300px, -50%);
+				}
+			</style>
+				
+			<?php } ?>
         </div>
     </div>
 <?php endif; ?>
 
-<?php if ( $flats['type'] == "home" ): ?>
-    <div id="home-detail" style="display:none;max-width:500px;">
-xyz
-    </div>
-<?php endif; ?>
+
