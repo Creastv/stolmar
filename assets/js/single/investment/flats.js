@@ -75,20 +75,23 @@ var oldStart = 0;
             // formModal();
         },
         columns: [
-            {data: 'name', className: "flat_name"},
-            {data: 'building', className: "flat_building"},
-            {data: 'floor', className: "flat_floor"},
-            {data: 'rooms', className: "flat_rooms"},
-            {data: 'area', className: "flat_area"},
-            {data: 'sold_status', className: "flat_sold_status"},
-            {data: 'price', className: "flat_price"},
-            {data: 'pdf', className: "flat_pdf"},
-            {data: 'answer', className: "flat_answer"},
+            {data: 'name', className: "flat_name",  width: "30px",},
+            {data: 'building', className: "flat_building",  width: "30px" },
+            {data: 'floor', className: "flat_floor",  width: "30px" },
+            {data: 'rooms', className: "flat_rooms",  width: "30px" },
+            {data: 'area', className: "flat_area",  width: "30px" },
+            {data: 'balkon', className: "flat_balkon",  width: "30px" },
+            {data: 'garden', className: "flat_garden",  width: "30px" },
+            {data: 'sold_status', className: "flat_sold_status",  width: "30px" },
+            {data: 'price', className: "flat_price",  width: "30px" },
+            {data: 'pdf', className: "flat_pdf",  width: "30px" },
+            {data: '3d', className: "flat_3d",  width: "30px" },
+            {data: 'answer', className: "flat_answer",  width: "430px",},
         ],
         columnDefs: [
             {
                 orderable: false,
-                targets: [7, 8]
+                targets: [ 9, 10, 11]
             },
             {
                 // "targets": [ 9, 10, 11 ],
@@ -96,7 +99,7 @@ var oldStart = 0;
                 "searchable": true
             },
         ],
-        "order": [[5, "desc"]]
+        "order": [7, "ASC"]
     });
 
     $('#flat_rooms').on('change', function () {

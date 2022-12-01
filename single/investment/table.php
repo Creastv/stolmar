@@ -82,15 +82,18 @@ $args = array(
                 <table id="table">
                     <thead>
                     <tr role="row">
-                        <th>Nr. Lokalu</th>
-                        <th>Nr. Budynku</th>
-                        <th>Piętro</th>
-                        <th>L.pokoi</th>
-                        <th>Metraż</th>
-                        <th>Status</th>
-                        <th>Cena</th>
-                        <th>&nbsp;</th>
-                        <th>&nbsp;</th>
+                        <th data-priority="0" >Nr. Lokalu</th>
+                        <th data-priority="11">Nr. Budynku</th>
+                        <th data-priority="3">Piętro</th>
+                        <th data-priority="4">L.pokoi</th>
+                        <th data-priority="5" >Metraż</th>
+                        <th  data-priority="9" >Balkon</th>
+                        <th  data-priority="10" >Ogród</th>
+                        <th data-priority="2" >Status</th>
+                        <th data-priority="8" >Cena</th>
+                        <th  data-priority="6" >&nbsp;</th>
+                        <th  data-priority="7" >&nbsp;</th>
+                        <th data-priority="1">&nbsp;</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -98,21 +101,52 @@ $args = array(
 					$posts = new WP_Query( $args );
 					while ( $posts->have_posts() ):
 						$posts->the_post();
+                        switch ( get_field( 'sold_status' ) ) {
+                            case 0;
+								$color = "green";
+                                $num = 0;
+                                $inf = "wolne";
+								break;
+							case 1;
+								$color = "green";
+                                $inf = "wolne";
+                                $num = 1;
+								break;
+                            case 2;
+								$color = "orange";
+                                $inf = "zarezerwowane";
+                                $num = 2;
+								break;
+							case 3;
+								$color = "red";
+                                $inf = "sprzedane";
+                                $num = 3;
+								break;
+							
+						}
 						?>
-                        <tr class="<?php echo get_field( 'sold_status' ) == "0" ? 'wolne' : 'sprzedane'; ?>">
+
+                        <tr class="<?php echo $inf ?>">
                             <td class="sorting"> 
-                            <?php echo get_field( 'name' ) ?: '---'; ?></td>
+                            <?php echo get_field( 'name' );?></td>
                             <td class="sorting"><?php echo get_field( 'building' ) ?: '---'; ?></td>
                             <td class="sorting"><?php echo get_field( 'floor' ) == "0" ? 'Parter' : get_field( 'floor' ) ?></td>
                             <td class="sorting"><?php echo get_field( 'rooms' ) ?: '---'; ?></td>
                             <td class="sorting"><?php echo number_format( get_field( 'area' ), 2, '.', '' ); ?>
                                 <span></span>
                             </td>
-                            <td class="sorting"><?php echo get_field( 'sold_status' ) == "0" ? 'wolne' : 'sprzedane'; ?></td>
+                            <td><?php echo get_field( 'balkon' ) ?: '---'; ?></td>
+                            <td><?php echo get_field( 'ogrod' ) ?: '---'; ?></td>
+                            <td class="sorting">
+                                <span style="color: <?php echo $color; ?>">
+                                <span style="display:none"> <?php echo $num; ?> </span> <?php echo $inf; ?> 
+                                </span>
+                            </td>
                             <td class="sorting"><?php echo get_field( 'price' ) ? get_field( 'price' ) . ' zł' : '---'; ?></td>
-                            <td><?php echo get_field( 'sold_status' ) == "0" && get_field( 'card_link' ) ? '<a data-fancybox data-type="pdf" href="' . get_field( 'card_link' )['url'] . '">Pobierz PDF</a>' : '---'; ?></td>
+                            <td><?php echo get_field( 'card_link' ) ? '<a data-fancybox data-type="pdf" href="' . get_field( 'card_link' )['url'] . '">Pobierz PDF</a>' : '---'; ?></td>
+                            <td><?php echo get_field( 'plan_link' ) ? '<a href="' . get_field( 'plan_link' )['url'] . '" target="_blank">Pobierz zrzut 3D</a>' : '---'; ?></td>
                             <td><a href="#" onclick="test(event, '<?php echo get_field( 'name' ); ?>')"  class="btn btn-modal">Zapytaj o
-                                    mieszkanie</a></td>        
+                                mieszkanie</a></td>        
                         </tr>
 					<?php endwhile;
 					wp_reset_query(); ?>
