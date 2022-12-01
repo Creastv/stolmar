@@ -91,17 +91,7 @@
 
 					}
 
-					switch ( $c['sold_status'] ) {
-						case 0;
-							$status = "W sprzedaży";
-							break;
-						case 1;
-							$status = "Sprzedany";
-							break;
-						case 2;
-							$status = "W przygotowaniu";
-							break;
-					}
+					
                   
                         
 					?>
@@ -110,16 +100,12 @@
 						<?php if ( $c['sold_status'] == '0' && $flats['type'] == "flats" ): ?>
                             href="<?php echo isset( $c['url'] ) ? $c['url'] : '#flats-table'; ?>"
 						<?php endif; ?>
-						
                             href="#flats-table"
-				
                             coords="<?php echo $c['point']; ?>"
                             shape="poly"
-                            data-apartone="<?php the_field( 'name', $apatOne->ID); ?> - <?php echo get_field( 'floor', $apatOne->ID) == "0" ? 'Parter' : "Piętro" ?>"
-                            data-stat="<?php echo $status; ?>"
+                            data-stat="<?php $c['sold_status']; ?>"
                             data-floor="<?php echo $c['floor'] == "0" ? 'Parter' : $c['floor'] ?>"
                     >
-                    <?php $c['sold_status'] ?>
 				<?php endforeach; ?>
             </map>
 			<?php } ?>
