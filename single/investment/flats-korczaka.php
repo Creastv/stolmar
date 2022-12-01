@@ -106,10 +106,10 @@
                             href="#flats-table"
                             coords="<?php echo $c['point']; ?>"
                             shape="poly"
-                            data-stat="<?php $c( 'sold_status' ); ?>"
+                            data-stat="<?php echo $c( 'sold_status' ); ?>"
                             data-floor="<?php echo $c['floor'] == "0" ? 'Parter' : $c['floor'] ?>"
                     >
-                    <?php $c( 'sold_status' ) ?>
+                    <?php echo $c( 'sold_status' ) ?>
 				<?php endforeach; ?>
             </map>
 			<?php } ?>
