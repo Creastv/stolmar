@@ -98,7 +98,7 @@ var oldStart = 0;
                 "searchable": true
             },
         ],
-        "order": [6, "ASC"]
+        "order": [6, "asc"]
     });
 
     $('#flat_rooms').on('change', function () {
