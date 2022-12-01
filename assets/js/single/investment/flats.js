@@ -106,7 +106,7 @@ var oldStart = 0;
     });
 
     $('#flat_floor').on('change', function () {
-        table.columns(1).search(this.value).draw();
+        table.columns(2).search(this.value).draw();
     });
 
    
