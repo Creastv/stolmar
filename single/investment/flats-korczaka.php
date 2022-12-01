@@ -45,50 +45,58 @@
 					$fill_color = "";
 					$fill_opacity = "";
 					$status = "";
-
-			        $apatOne = $c['mieszkanie_1'];
-                    $statOne = get_field( 'sold_status', $apatOne->ID);
-                    $apatTwo = $c['mieszkanie_2'];
-                    $statTwo = get_field( 'sold_status', $apatTwo->ID);
-                            if($statOne == "1" && $statTwo == "1"){
-                                $stroke_color = "ff0000";
-							 	$fill_color   = "ff0000";
-							 	$fill_opacity = "0.6";
-                            } else if($statOne == "0" && $statTwo == "1" || $statOne == "1" && $statTwo == "0"){
-                                $stroke_color = "d5d5d5";
-								$fill_color   = "ffa500";
+					if ( is_page_template( 'investment.php' ) ) {
+						switch ( $c['status'] ) {
+							case 0;
+								$stroke_color = "005607";
+								$fill_color   = "009b0c";
 								$fill_opacity = "0.6";
-								
-                            }  else {
-                                $stroke_color = "ddbd7c";
-							 	$fill_color   = "008000";
-							 	$fill_opacity = "0.6";
-                            }
 
-                            switch ( $statOne ) {
-                                case 0;
-                                    $apartOneStatus = "W sprzedaży";
-                                    break;
-                                case 1;
-                                    $apartOneStatus = "Sprzedany";
-                                    break;
-                                case 2;
-                                    $apartOneStatus = "W ghkjprzygotowaniu";
-                                    break;
-                            }
-                            
-                            switch ( $statTwo ) {
-                                case 0;
-                                    $apartTwoStatus = "W sprzedaży";
-                                    break;
-                                case 1;
-                                    $apartTwoStatus = "Sprzedany";
-                                    break;
-                                case 2;
-                                    $apartTwoStatus = "Zarezerwowany";
-                                    break;
-                            }
-                        
+								break;
+							case 1;
+								$stroke_color = "ff0000";
+								$fill_color   = "ff0000";
+								$fill_opacity = "0.4";
+								break;
+							case 2;
+								$stroke_color = "d5d5d5";
+								$fill_color   = "9a9a9a";
+								$fill_opacity = "0.6";
+								break;
+						}
+					} else {
+							switch ( $c['status'] ) {
+								case 0;
+									$stroke_color = "ddbd7c";
+									$fill_color   = "000000";
+									$fill_opacity = "0.6";
+
+									break;
+								case 1;
+									$stroke_color = "ff0000";
+									$fill_color   = "ff0000";
+									$fill_opacity = "0.4";
+									break;
+								case 2;
+									$stroke_color = "d5d5d5";
+									$fill_color   = "9a9a9a";
+									$fill_opacity = "0.6";
+									break;
+							}
+
+					}
+
+					switch ( $c['status'] ) {
+						case 0;
+							$status = "W sprzedaży";
+							break;
+						case 1;
+							$status = "Sprzedany";
+							break;
+						case 2;
+							$status = "W przygotowaniu";
+							break;
+					}
 					?>
                     <area
                             data-maphilight='{"strokeColor":"<?php echo $stroke_color; ?>","strokeWidth":1,"fillColor":"<?php echo $fill_color; ?>","fillOpacity":<?php echo $fill_opacity; ?>}'
@@ -99,7 +107,7 @@
                             coords="<?php echo $c['point']; ?>"
                             shape="poly"
                             data-apartone="<?php the_field( 'name', $apatOne->ID); ?> - <?php echo get_field( 'floor', $apatOne->ID) == "0" ? 'Parter' : "Piętro" ?>"
-                            data-apartonestat="<?php echo $apartOneStatus; ?>"
+                            data-apartonestat="<?php echo $c['status']; ?>"
                             data-floor="<?php echo $c['floor'] == "0" ? 'Parter' : $c['floor'] ?>"
                     >
                     <?php $c['status'] ?>
