@@ -85,7 +85,7 @@
                                     $apartTwoStatus = "Sprzedany";
                                     break;
                                 case 2;
-                                    $apartTwoStatus = "przygotowaniu";
+                                    $apartTwoStatus = "Zarezerwowany";
                                     break;
                             }
                         
@@ -95,15 +95,11 @@
 						<?php if ( $c['status'] == '0' && $flats['type'] == "flats" ): ?>
                             href="<?php echo isset( $c['url'] ) ? $c['url'] : '#flats-table'; ?>"
 						<?php endif; ?>
-						
                             href="#flats-table"
-				
                             coords="<?php echo $c['point']; ?>"
                             shape="poly"
                             data-apartone="<?php the_field( 'name', $apatOne->ID); ?> - <?php echo get_field( 'floor', $apatOne->ID) == "0" ? 'Parter' : "Piętro" ?>"
-                            data-aparttwo="<?php the_field( 'name', $apatTwo->ID); ?> - <?php echo get_field( 'floor', $apatTwo->ID) == "0" ? 'Parter' : "Piętro" ?>"
                             data-apartonestat="<?php echo $apartOneStatus; ?>"
-                            data-aparttwostat="<?php echo $apartTwoStatus; ?>"
                             data-floor="<?php echo $c['floor'] == "0" ? 'Parter' : $c['floor'] ?>"
                     >
                     <?php $c['status'] ?>

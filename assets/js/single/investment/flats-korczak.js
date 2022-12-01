@@ -120,18 +120,11 @@ var oldStart = 0;
     });
     dataFloor.on("mouseover", function () {
         let floor = $(this).data('floor');
-        let status = $(this).data('status');
+        let apartOneStat = $(this).data('apartonestat');
         const tooltip = $('.tooltip-content');
 
         tooltip.css("display", "flex");
-
-        if (floor > 0 && floor < 10) {
-            tooltip.html('<div class="floor-item floor">' + floor + '</div><span>piętro</span>');
-        } else if (floor === "Parter") {
-            tooltip.html('<div class="floor-item parter">Parter</div>');
-        } else {
-            tooltip.html('<div class="floor-item other">' + floor + '</div><span>' + status + '</span>');
-        }
+        tooltip.html('<div class="floor-item other">' + floor + '</div><span>' + apartOneStat + '</span>');
     });
 
     
