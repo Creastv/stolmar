@@ -797,11 +797,11 @@ table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child:before,
     width: 210px;
 }
 
-.section-table table.dataTable .flat_area span:before {
+.section-table table.dataTable .flat_area span:before, .section-table table.dataTable .flat_balkon span:before, .section-table table.dataTable .flat_garden span:before {
     content: " m";
 }
 
-.section-table table.dataTable .flat_area span:after {
+.section-table table.dataTable .flat_area span:after, .section-table table.dataTable .flat_balkon span:after, .section-table table.dataTable .flat_garden span:after {
     font-size: 10px;
     content: "2";
     position: relative;

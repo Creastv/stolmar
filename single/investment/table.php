@@ -127,11 +127,9 @@ $args = array(
                             <td class="sorting"><?php echo get_field( 'building' ) ?: '---'; ?></td>
                             <td class="sorting"><?php echo get_field( 'floor' ) == "0" ? 'Parter' : get_field( 'floor' ) ?></td>
                             <td class="sorting"><?php echo get_field( 'rooms' ) ?: '---'; ?></td>
-                            <td class="sorting"><?php echo number_format( get_field( 'area' ), 2, '.', '' ); ?>
-                                <span></span>
-                            </td>
-                            <td><?php echo get_field( 'balcony' ) ?: '---'; ?></td>
-                            <td><?php echo get_field( 'ogrodek' ) ?: '---'; ?></td>
+                            <td class="sorting"><?php echo number_format( get_field( 'area' ), 2, '.', '' ); ?> <span></span></td>
+                            <td><?php if(get_field( 'balcony' )) {  the_field( 'balcony' ); echo "<span></span>"; } else { echo "---"; }; ?> </td>
+                             <td><?php if(get_field( 'ogrodek' )) {  the_field( 'ogrodek' ); echo "<span></span>"; } else { echo "---"; }; ?> </td>
                             <td class="sorting">
                                 <span style="color: <?php echo $color; ?>">
                                 <span style="display:none"> <?php echo $num; ?> </span> <?php echo $inf; ?> 
