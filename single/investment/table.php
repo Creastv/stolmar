@@ -139,7 +139,7 @@ $args = array(
                             </td>
                             <td class="sorting"><?php echo get_field( 'price' ) ? get_field( 'price' ) . ' zł' : '---'; ?></td>
                             <td><?php echo get_field( 'card_link' ) ? '<a data-fancybox data-type="pdf" href="' . get_field( 'card_link' )['url'] . '">Pobierz PDF</a>' : '---'; ?></td>
-                            <td><?php echo get_field( 'plan_link' ) ? '<a href="' . get_field( 'plan_link' )['url'] . '" target="_blank">Pobierz zrzut 3D</a>' : '---'; ?></td>
+                            <td><?php echo get_field( 'plan_link' ) ? '<a href="' . get_field( 'plan_link' )['url'] . '" target="_blank">Pobierz widok 3D</a>' : '---'; ?></td>
                             <td><a href="#" onclick="test(event, '<?php echo get_field( 'name' ); ?>')"  class="btn btn-modal">Zapytaj o
                                 mieszkanie</a></td>        
                         </tr>
