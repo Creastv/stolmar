@@ -54,17 +54,20 @@
 									$stroke_color = "ddbd7c";
 									$fill_color   = "000000";
 									$fill_opacity = "0.6";
+                                    $status = "Wolny" ;
 
 									break;
 								case 1;
 									$stroke_color = "ff0000";
 									$fill_color   = "ff0000";
 									$fill_opacity = "0.4";
+                                    $status = "Sprzedany" ;
 									break;
 								case 2;
 									$stroke_color = "d5d5d5";
 									$fill_color   = "9a9a9a";
 									$fill_opacity = "0.6";
+                                    $status = "Zarezerwowany" ;
 									break;
 							}
                         
@@ -77,7 +80,7 @@
                             href="#flats-table"
                             coords="<?php echo $c['point']; ?>"
                             shape="poly"
-                            data-stat="<?php  echo $stat; ?>"
+                            data-stat="<?php  echo $status; ?>"
                             data-floor="<?php echo $c['floor'] == "0" ? 'Parter' : $c['floor'] ?>"
                     >
 				<?php endforeach; ?>
