@@ -4,7 +4,7 @@
         <div class="row ">
             <div class="col-sm-6">
                 <div class="footer__copyright">
-                    <p>All Rights Reserved Stolmar Suchodolscy</p>
+                    <p>All Rights Reserved Stolmar Suchodolscy Sp.j.</p>
                 </div>
             </div>
             <div class="col-sm-6 ">
