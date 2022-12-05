@@ -13,6 +13,6 @@
     <a class="email" href="mailto:<?php echo $header['email']; ?>" title="#">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/mail-icon.png"
              alt="E-mail" width="20" height="17">
-        <span><?php echo $header['email']; ?></span>
+        <!-- <span><?php echo $header['email']; ?></span> -->
     </a>
 </div>
