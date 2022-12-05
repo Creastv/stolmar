@@ -106,18 +106,18 @@ $args = array(
                         switch ( get_field( 'sold_status' ) ) {
                             case 0;
 								$color = "green";
-                                $num = 0;
+                                $num = 1;
                                 $inf = "wolne";
 								break;
 							case 1;
 								$color = "red";
                                 $inf = "sprzedane";
-                                $num = 2;
+                                $num = 3;
 								break;
                             case 2;
 								$color = "orange";
                                 $inf = "zarezerwowane";
-                                $num = 1;
+                                $num = 2;
 								break;
 							
 						}
