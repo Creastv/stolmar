@@ -14,6 +14,7 @@
 	get_template_part('single/investment/timeline');
 	get_template_part('single/investment/location');
 	get_template_part('single/investment/seo');
+	get_template_part('single/investment/video');
 	get_template_part('single/investment/gallery');
 ?>
 </section>
